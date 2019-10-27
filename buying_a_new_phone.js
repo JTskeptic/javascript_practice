@@ -1,21 +1,21 @@
 //purchasing a new phone
 
-var phonePrice = 999.99
+var itemPrice = 999.99
 const CA_TAX = .0725
 
 var bankAccount = parseFloat(prompt( "How much money is in your bank account?" ));
 
-console.log("bank account balance is $" + bankAccount);
+console.log("bank account balance is $" + bankAccount.toFixed(2));
 
-phonePrice = parseFloat(prompt( "How much does the item cost?" ));
+itemPrice = parseFloat(prompt( "How much does the item cost?" ));
 
-console.log("the cost of the item is $" + phonePrice);
+console.log("the cost of the item is $" + itemPrice.toFixed(2));
 
 function calculateTax() {
-    return phonePrice * CA_TAX;
+    return itemPrice * CA_TAX;
 }
 
-var totalCost = phonePrice + calculateTax();
+var totalCost = itemPrice + calculateTax();
 
 console.log("the total cost of the item with California sales tax is $" + totalCost.toFixed(2));
 
